@@ -23,17 +23,34 @@ nav {
 nav ul {
     display: inline-block;
     list-style: none;
+    transition: 1.5s;
 }
 
 nav ul li {
     display: inline-block;
     margin: 20px;
-
+   position: relative;
 }
+nav ul li ::after{
+ content: "";
+ height: 3px;
+ width:0;
+ background: #ff523b;
+ position: absolute;
+ right: 0;
+ bottom: -10px;
+ transition: 0.5s;
+}
+nav ul li :hover::after{
+    width: 100%;
+}
+
+
 
 a {
     text-decoration: none;
     color: #555;
+    text-transform: uppercase;
 }
 
 p {
